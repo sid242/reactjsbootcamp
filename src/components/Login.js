@@ -1,6 +1,7 @@
-import React,{useState,useHistory} from 'react'
+import React,{useState} from 'react'
+import { useHistory } from "react-router-dom";
 
-export default function Login() {
+export default function Login(props) {
     const [credentials, setCredentials] = useState({email: "", password: ""}) 
     let history = useHistory();
 
