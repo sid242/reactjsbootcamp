@@ -61,7 +61,10 @@ export default function Navbar() {
             <Link className="btn btn-primary mx-1" to="/signup" role="button">
               Signup
             </Link>{" "}
-          </form>:<button onClick={handleLogout} className='btn btn-primary'>Logout</button>}
+          </form>:<div>
+            <span style={{"color":"white","marginRight":"10px"}}>{JSON.parse(localStorage.getItem('userInfo')).data.user.email}</span>
+            <button onClick={handleLogout} className='btn btn-primary'>Logout</button>
+            </div>}
         </div>
       </div>
     </nav>

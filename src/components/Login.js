@@ -16,11 +16,11 @@ export default function Login(props) {
         });
         const json = await response.json()
         console.log(json);
+        localStorage.setItem('userInfo',JSON.stringify(json))
         if (json.success){
             // Save the auth token and redirect
             localStorage.setItem('token', json.authtoken); 
             history.push("/");
-
         }
         else{
             alert("Invalid credentials");
